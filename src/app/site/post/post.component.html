@@ -1,0 +1,41 @@
+<div class="container">
+  <h1 class="display-4">Adding a Book</h1>
+
+  <form ngNativeValidate #f="ngForm" (ngSubmit)="addUser(f)">
+      <div class="form-group row">
+        <label for="titleInput" class="col-sm-2 col-form-label">Book ID</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="titleInput" ngModel name="bookId" placeholder="Id of the Book" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="bodyInput" class="col-sm-2 col-form-label">Title</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="bodyInput" ngModel name="title" placeholder="Title of the book" required>
+        </div>
+      </div>
+      <div class="form-group row">
+          <label for="idInput" class="col-sm-2 col-form-label">Price</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="userIdInput" ngModel name="price" placeholder="Price of the book" required>
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="idInput" class="col-sm-2 col-form-label">Publish Date</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="userIdInput" ngModel name="publishDate" placeholder="Publish Date of the book" required>
+            </div>
+          </div>
+          <div class="form-group row">
+              <label for="idInput" class="col-sm-2 col-form-label">Volume</label>
+              <div class="col-sm-10">
+                <input type="number" class="form-control" id="userIdInput" ngModel name="volume" placeholder="Volume of the book" required>
+              </div>
+            </div>
+      <button type="submit" class="btn btn-primary" >Add Book</button>
+    </form>
+
+  <div class="alert alert-success" *ngIf="isSaved">
+    Thanks! saved successfully.
+  </div>
+</div>
